@@ -285,6 +285,22 @@ WHERE
       AND area > 0
   );
 
+-- 7. Find each country that belongs to a continent where all populations are 
+-- less than 25000000. Show name, continent and population
+SELECT
+  name, continent, population
+FROM
+  world
+WHERE
+  continent NOT IN (
+    SELECT
+      continent
+    FROM
+      world
+    WHERE
+      population > 25000000
+  );
+
 -- SUM and COUNT
 
 -- 1. Show the total population of the world
