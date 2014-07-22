@@ -157,6 +157,27 @@ FROM
   nobel
 WHERE
   winner LIKE "John%";
+  
+-- 8. In which years was the Physics prize awarded but no Chemistry prize
+SELECT
+  DISTINCT yr
+FROM (
+  SELECT 
+    yr
+  FROM 
+    nobel
+  WHERE 
+    subject = "Physics"
+) phys_yrs
+WHERE
+  yr NOT IN (
+    SELECT
+      yr
+    FROM
+      nobel
+    WHERE
+      subject = "Chemistry"
+  ); 
 
 -- SELECT within SELECT
 
