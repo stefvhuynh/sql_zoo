@@ -1,4 +1,4 @@
-sql_zoo
+SQL Zoo
 =======
 
-My solutions to the [SQLZOO tutorial](http://sqlzoo.net).
+My solutions to the [SQL Zoo tutorial](http://sqlzoo.net).
